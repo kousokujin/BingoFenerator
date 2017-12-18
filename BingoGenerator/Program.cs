@@ -13,7 +13,7 @@ namespace BingoGenerator
             //タイトルとか表示
             System.Console.WriteLine("-------------------------------");
             System.Console.WriteLine("BingoGenerator");
-            System.Console.WriteLine("version 1.0.0.0");
+            System.Console.WriteLine("version 1.0.0.2");
             System.Console.WriteLine("Copyright (c) 2017 Kousokujin.");
             System.Console.WriteLine("Released under the MIT license.");
             System.Console.WriteLine("-------------------------------");
@@ -31,14 +31,16 @@ namespace BingoGenerator
             for (int i = 0; i < 24; i++)
             {
                 bool check = true;
-                int n = genNumber(i);
+                //int n = genNumber(i);
+                int n;
                 int genloop = 0;
 
-                while(check == true)
+                do
                 {
-                    check = numCheck(n, num);
                     n = genNumber(i + genloop);
-                }
+                    check = numCheck(n, num);
+                    //n = genNumber(i + genloop);
+                } while (check == true);
 
                 num[i] = n;
 
