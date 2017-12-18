@@ -86,8 +86,8 @@ namespace BingoGenerator
             Random r2 = new Random((sec + hour) * mll + seed);
             Random r3 = new Random(mll + seed);
 
-            int num1 = r1.Next(1, 6);
-            int num2 = r2.Next(1, 6);
+            int num1 = r1.Next(1, 7);
+            int num2 = r2.Next(1, 7);
             int num3 = r3.Next(0, 2);
 
             string numStr = string.Format("{0}{1}{2}", num3, num2, num1);
